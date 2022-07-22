@@ -1,7 +1,8 @@
 import React from "react"
-import logo from "../../components/assets/images/logo.svg"
+// import cipher1 from "../../components/assets/images/cipher.png"
 import { Link } from "react-router-dom"
-
+import { NavLink } from "react-router-dom"
+// import Login from "../login/Login"
 const Search = ({ CartItem }) => {
   // fixed Header
   window.addEventListener("scroll", function () {
@@ -14,7 +15,8 @@ const Search = ({ CartItem }) => {
       <section className='search'>
         <div className='container c_flex'>
           <div className='logo width '>
-            <img src={logo} alt='' />
+            {/* <img src={cipher1} alt='' /> */}
+            <h2 align="center">CIPHER</h2>
           </div>
 
           <div className='search-box f_flex'>
@@ -24,7 +26,11 @@ const Search = ({ CartItem }) => {
           </div>
 
           <div className='icon f_flex width'>
-            <i className='fa fa-user icon-circle'></i>
+            <div className='login'>
+              <NavLink className="abc" to='Login'>
+                <i className='fa fa-user icon-circle'></i>
+              </NavLink>
+            </div>
             <div className='cart'>
               <Link to='/cart'>
                 <i className='fa fa-shopping-bag icon-circle'></i>
